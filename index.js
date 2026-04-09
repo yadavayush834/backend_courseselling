@@ -1,18 +1,10 @@
 const express = require('express');
-const {createUserRoutes} = require("./user ")
+const {createUserRoutes} = require("./user ");
+const { createCourseRoutes } = require('./routes/course');
 
 const app = express();
 
 createUserRoutes(app);
+createCourseRoutes(app);
 
 
-app.post('/course/purchase',function(req,res){
-    res.json({
-        message:"hi"
-    })
-})
-app.get('/course/preview',function(req,res){
-    res.json({
-        message:"hi"
-    })
-})
